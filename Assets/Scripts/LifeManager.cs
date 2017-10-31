@@ -24,7 +24,7 @@ public class LifeManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (this.lifeCounter < 0) {
+		if (this.lifeCounter <= 0) {
 			this.gameOverScreen.SetActive (true);
 			this.player.gameObject.SetActive (false);
 		}
@@ -49,6 +49,7 @@ public class LifeManager : MonoBehaviour
 	public void TakeLife ()
 	{
 		this.lifeCounter--;
+		print ("take life");
 		PlayerPrefs.SetInt ("PlayerCurrentLives", this.lifeCounter);
 	}
 		

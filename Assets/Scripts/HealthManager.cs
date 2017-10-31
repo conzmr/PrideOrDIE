@@ -34,7 +34,6 @@ public class HealthManager : MonoBehaviour
 			HealthManager.playerHealth = 0;
 			this.levelManager.RespawnPlayer();
 			this.isDead = true;
-			this.lifeSystem.TakeLife ();
 			this.theTime.ResetTime ();
 		}
 
