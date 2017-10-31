@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
 
 		if (grounded) {
 			this.doubleJumped = false;
+		} else {
+			print("Grounded");
 		}
 
 		this.anim.SetBool ("Grounded", this.grounded);
