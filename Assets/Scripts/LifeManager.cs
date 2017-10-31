@@ -51,4 +51,5 @@ public class LifeManager : MonoBehaviour
 		this.lifeCounter--;
 		PlayerPrefs.SetInt ("PlayerCurrentLives", this.lifeCounter);
 	}
+		
 }

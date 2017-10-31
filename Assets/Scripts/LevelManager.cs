@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
 	public float respawnDelay;
 	public int pointPenaltyOnDeath;
 	public HealthManager healthManager;
+	public LifeManager lifeManager;
 
 	private PlayerController player;
 	private Renderer playerRenderer;
@@ -25,6 +26,7 @@ public class LevelManager : MonoBehaviour
 		this.playerRigidbody2D = this.player.GetComponent<Rigidbody2D> ();
 		this.camera = FindObjectOfType<CameraController> ();
 		this.healthManager = FindObjectOfType<HealthManager> ();
+		this.lifeManager = FindObjectOfType<LifeManager> ();
 	}
 	
 	// Update is called once per frame
@@ -44,7 +46,7 @@ public class LevelManager : MonoBehaviour
 		this.player.enabled = false;
 		this.playerRenderer.enabled = false;
 		this.camera.isFollowing = false;
-		ScoreManager.AddPoints (-this.pointPenaltyOnDeath);
+		this.lifeManager.TakeLife ();
 		Debug.Log ("Player Respawn");
 		yield return new WaitForSeconds (this.respawnDelay);
 		this.playerRigidbody2D.velocity = new Vector2 (0, 0);
