@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a6127eb2f4db74abc9c388f17f99c114
-timeCreated: 1432368328
+timeCreated: 1509418008
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -24,52 +24,70 @@ TextureImporter:
     21300034: flying_2
     21300036: flying_3
     21300038: flying_4
-  serializedVersion: 2
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 8
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 128
   textureSettings:
+    serializedVersion: 2
     filterMode: 0
     aniso: 16
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 16
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 128
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: Player
+    - serializedVersion: 2
+      name: Player
       rect:
         serializedVersion: 2
         x: 0
@@ -77,9 +95,19 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ground
+      outline:
+      - - {x: -8, y: 6}
+        - {x: -8, y: -5}
+        - {x: -7, y: -6}
+        - {x: 7, y: -6}
+        - {x: 8, y: -5}
+        - {x: 8, y: 6}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Ground
       rect:
         serializedVersion: 2
         x: 0
@@ -87,9 +115,17 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Spikes
+      outline:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Spikes
       rect:
         serializedVersion: 2
         x: 16
@@ -97,9 +133,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player_Walking_1
+      outline:
+      - - {x: -6, y: 6}
+        - {x: -7, y: 5}
+        - {x: -8, y: 0}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: -4}
+        - {x: 6, y: 6}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Walking_1
       rect:
         serializedVersion: 2
         x: 16
@@ -107,9 +154,18 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player_Walking_2
+      outline:
+      - - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: 6, y: -6}
+        - {x: 8, y: -3}
+        - {x: 8, y: 6}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Walking_2
       rect:
         serializedVersion: 2
         x: 32
@@ -117,9 +173,18 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Coin_1
+      outline:
+      - - {x: -8, y: 6}
+        - {x: -8, y: -4}
+        - {x: -5, y: -6}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Coin_1
       rect:
         serializedVersion: 2
         x: 32
@@ -127,9 +192,17 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Enemy_1
+      outline:
+      - - {x: -3.5, y: 3.5}
+        - {x: -3.5, y: -3.5}
+        - {x: 3.5, y: -3.5}
+        - {x: 3.5, y: 3.5}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Enemy_1
       rect:
         serializedVersion: 2
         x: 64
@@ -137,9 +210,17 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Enemy_2
+      outline:
+      - - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Enemy_2
       rect:
         serializedVersion: 2
         x: 80
@@ -147,9 +228,17 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Enemy_3
+      outline:
+      - - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Enemy_3
       rect:
         serializedVersion: 2
         x: 96
@@ -157,9 +246,18 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: NinjaStar
+      outline:
+      - - {x: -8, y: 6}
+        - {x: -8, y: -5}
+        - {x: -7, y: -6}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: NinjaStar
       rect:
         serializedVersion: 2
         x: 47
@@ -167,9 +265,17 @@ TextureImporter:
         width: 6
         height: 6
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player Sword
+      outline:
+      - - {x: -3, y: 3}
+        - {x: -3, y: -3}
+        - {x: 3, y: -3}
+        - {x: 3, y: 3}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player Sword
       rect:
         serializedVersion: 2
         x: 2
@@ -177,19 +283,35 @@ TextureImporter:
         width: 9
         height: 5
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Level Exit
+      outline:
+      - - {x: -4.5, y: 2.5}
+        - {x: -4.5, y: -2.5}
+        - {x: 4.5, y: -2.5}
+        - {x: 4.5, y: 2.5}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Level Exit
       rect:
         serializedVersion: 2
         x: 7
         y: 48
         width: 19
         height: 28
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Coin_2
+      alignment: 9
+      pivot: {x: 0.5667593, y: 0.37542248}
+      border: {x: 0, y: 0, z: 0, w: 6}
+      outline:
+      - - {x: -9.5, y: 8.133537}
+        - {x: -9.5, y: -14}
+        - {x: 9.5, y: -14}
+        - {x: 9.5, y: 8.292084}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Coin_2
       rect:
         serializedVersion: 2
         x: 41
@@ -197,9 +319,17 @@ TextureImporter:
         width: 4
         height: 7
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Coin_3
+      outline:
+      - - {x: -2, y: 3.5}
+        - {x: -2, y: -3.5}
+        - {x: 2, y: -3.5}
+        - {x: 2, y: 3.5}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Coin_3
       rect:
         serializedVersion: 2
         x: 47
@@ -207,9 +337,17 @@ TextureImporter:
         width: 1
         height: 7
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ladder
+      outline:
+      - - {x: -0.5, y: 3.5}
+        - {x: -0.5, y: -3.5}
+        - {x: 0.5, y: -3.5}
+        - {x: 0.5, y: 3.5}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Ladder
       rect:
         serializedVersion: 2
         x: 64
@@ -217,9 +355,17 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Enemy_Star
+      outline:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Enemy_Star
       rect:
         serializedVersion: 2
         x: 35
@@ -227,9 +373,17 @@ TextureImporter:
         width: 9
         height: 9
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: flying_1
+      outline:
+      - - {x: 4.5, y: -4.5}
+        - {x: 4.5, y: 4.5}
+        - {x: -4.5, y: 4.5}
+        - {x: -4.5, y: -4.5}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: flying_1
       rect:
         serializedVersion: 2
         x: 64
@@ -237,9 +391,19 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: flying_2
+      outline:
+      - - {x: -8, y: 7}
+        - {x: -8, y: -4}
+        - {x: -5, y: -7}
+        - {x: 5, y: -7}
+        - {x: 8, y: -4}
+        - {x: 8, y: 7}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: flying_2
       rect:
         serializedVersion: 2
         x: 80
@@ -247,9 +411,19 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: flying_3
+      outline:
+      - - {x: -8, y: 7}
+        - {x: -8, y: -7}
+        - {x: 7, y: -7}
+        - {x: 8, y: -5}
+        - {x: 8, y: 6}
+        - {x: 7, y: 7}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: flying_3
       rect:
         serializedVersion: 2
         x: 96
@@ -257,9 +431,20 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: flying_4
+      outline:
+      - - {x: -7, y: 7}
+        - {x: -8, y: 6}
+        - {x: -8, y: -4}
+        - {x: -5, y: -7}
+        - {x: 5, y: -7}
+        - {x: 8, y: -4}
+        - {x: 8, y: 7}
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: flying_4
       rect:
         serializedVersion: 2
         x: 112
@@ -267,8 +452,19 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 7}
+        - {x: -8, y: -7}
+        - {x: 7, y: -7}
+        - {x: 8, y: -5}
+        - {x: 8, y: 6}
+        - {x: 7, y: 7}
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
