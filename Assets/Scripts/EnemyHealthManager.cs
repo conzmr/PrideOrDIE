@@ -6,6 +6,7 @@ public class EnemyHealthManager : MonoBehaviour
 	public int enemyHealth;
 	public GameObject deathEffect;
 	public int pointsOnDeath;
+	public ChamController cham;
 
 	private AudioSource audio;
 
@@ -13,6 +14,7 @@ public class EnemyHealthManager : MonoBehaviour
 	void Start ()
 	{
 		this.audio = GetComponent<AudioSource> ();
+		cham = FindObjectOfType<ChamController> ();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +23,7 @@ public class EnemyHealthManager : MonoBehaviour
 		if (enemyHealth <= 0) {
 			Instantiate (this.deathEffect, transform.position, transform.rotation);
 			ScoreManager.AddPoints(this.pointsOnDeath);
+			cham.alive = false;
 			Destroy (gameObject);
 		}
 	}

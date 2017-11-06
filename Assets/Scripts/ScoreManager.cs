@@ -23,7 +23,7 @@ public class ScoreManager : MonoBehaviour
 	{
 		this.text = GetComponent<Text> ();
 
-		//ScoreManager.score = 0;
+		ScoreManager.score = 0;
 
 		ScoreManager.score = PlayerPrefs.GetInt ("CurrentPlayerScore");
 	}

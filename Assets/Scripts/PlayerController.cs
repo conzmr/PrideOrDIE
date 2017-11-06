@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-	public float moveSpeed;
+    public AudioSource powerupSoundEffect;
+    public float moveSpeed;
 	public float jumpHeight;
 	public Transform groundCheck;
 	public float groundCheckRadius;
@@ -46,6 +47,8 @@ public class PlayerController : MonoBehaviour
 
 		if (grounded) {
 			this.doubleJumped = false;
+		} else {
+			print("Grounded");
 		}
 
 		this.anim.SetBool ("Grounded", this.grounded);
@@ -123,7 +126,19 @@ public class PlayerController : MonoBehaviour
 		if (other.transform.tag == "MovingPlatform") {
 			transform.parent = other.transform;
 		}
-	}
+        if (other.name == "vaseline")
+        {
+            moveSpeed = 8;
+            this.powerupSoundEffect.Play();
+            Destroy(other.gameObject);
+        }
+        if (other.name == "maruchan")
+        {
+            jumpHeight = 20;
+            this.powerupSoundEffect.Play();
+            Destroy(other.gameObject);
+        }
+    }
 
 	void OnTriggerExit2D (Collider2D other)
 	{
@@ -131,4 +146,6 @@ public class PlayerController : MonoBehaviour
 			transform.parent = null;
 		}
 	}
+
+
 }
