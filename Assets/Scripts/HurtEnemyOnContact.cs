@@ -26,5 +26,9 @@ public class HurtEnemyOnContact : MonoBehaviour
 			other.GetComponent<EnemyHealthManager> ().giveDamage (this.damageToGive);
 			this.rigidbody2D.velocity = new Vector2(this.rigidbody2D.velocity.x, bounceOnEnemy);
 		}
+		if (other.tag == "Cham") {
+			other.GetComponent<EnemyChamController> ().giveDamage (this.damageToGive);
+			this.rigidbody2D.velocity = new Vector2(this.rigidbody2D.velocity.x, bounceOnEnemy);
+		}
 	}
 }

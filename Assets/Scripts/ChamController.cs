@@ -5,14 +5,14 @@ public class ChamController : MonoBehaviour
 {
 	//public string levelToLoad;
 
-	public EnemyHealthManager Cham;
+	public EnemyChamController Cham;
 	public bool alive;
 	private float time;
 
 	// Use this for initialization
 	void Start ()
 	{
-		this.Cham = FindObjectOfType<EnemyHealthManager> ();
+		this.Cham = FindObjectOfType<EnemyChamController> ();
 		this.alive = true;
 		time = 3;
 	}
