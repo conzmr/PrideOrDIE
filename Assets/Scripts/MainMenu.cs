@@ -7,11 +7,13 @@ public class MainMenu : MonoBehaviour
 	public string levelSelect;
 	public int playerLives;
 	public int playerHealth;
+	public int passedLevel = 1;
 
 	public void NewGame ()
 	{
 		PlayerPrefs.SetInt ("PlayerCurrentLives", this.playerLives);
 		PlayerPrefs.SetInt ("CurrentPlayerScore", 0);
+		PlayerPrefs.SetInt ("CurrentMaxLevel", this.passedLevel);
 		PlayerPrefs.SetInt ("PlayerCurrentHealth", this.playerHealth);
 		PlayerPrefs.SetInt ("PlayerMaxHealth", this.playerHealth);
 		Application.LoadLevel (this.startLevel);
