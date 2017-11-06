@@ -37,6 +37,9 @@ public class NinjaStarController : MonoBehaviour
 		if (other.tag == "Enemy") {
 			other.GetComponent<EnemyHealthManager> ().giveDamage(this.damageToGive);
 		}
+		if (other.tag == "Cham") {
+			other.GetComponent<EnemyChamController> ().giveDamage(this.damageToGive);
+		}
 
 		Instantiate (this.impactEffect, transform.position, transform.rotation);
 		Destroy (gameObject);

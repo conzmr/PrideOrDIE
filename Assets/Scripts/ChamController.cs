@@ -1,46 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class ChamController : MonoBehaviour {
-
-public float moveSpeed;
-public bool moveRight;
-public Transform wallCheck;
-public float wallCheckRadius;
-public LayerMask whatIsWall;
-public Transform edgeCheck;
-
-private new Rigidbody2D rigidbody2D;
-private bool hittingWall;
-private bool notAtEdge;
-
-// Use this for initialization
-void Start()
+public class ChamController : MonoBehaviour
 {
-    this.rigidbody2D = GetComponent<Rigidbody2D>();
-}
+	//public string levelToLoad;
 
-// Update is called once per frame
-void Update()
-{
-    this.hittingWall = Physics2D.OverlapCircle(this.wallCheck.position, this.wallCheckRadius, this.whatIsWall);
-    this.notAtEdge = !Physics2D.OverlapCircle(this.edgeCheck.position, this.wallCheckRadius, this.whatIsWall);
+	public EnemyChamController Cham;
+	public bool alive;
+	private float time;
 
-    if (this.hittingWall || this.notAtEdge)
-    {
-        this.moveRight = !this.moveRight;
-    }
+	// Use this for initialization
+	void Start ()
+	{
+		this.Cham = FindObjectOfType<EnemyChamController> ();
+		this.alive = true;
+		time = 3;
+	}
 
-    if (this.moveRight)
-    {
-        transform.localScale = new Vector3(-1f, 1f, 1f);
-        this.rigidbody2D.velocity = new Vector2(moveSpeed, this.rigidbody2D.velocity.y);
-    }
-    else
-    {
-        transform.localScale = new Vector3(1f, 1f, 1f);
-        this.rigidbody2D.velocity = new Vector2(-moveSpeed, this.rigidbody2D.velocity.y);
-    }
-}
+	// Update is called once per frame
+	void Update ()
+	{
+		
+		if (this.alive == false) {
+			time -= Time.deltaTime;
+			if (time <= 0) {
+				Application.LoadLevel ("Level Select");
+			}
+		}
+	}
+
 }
