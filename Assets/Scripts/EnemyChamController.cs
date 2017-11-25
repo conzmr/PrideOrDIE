@@ -6,7 +6,7 @@ public class EnemyChamController : MonoBehaviour
 	public int enemyHealth;
 	public GameObject deathEffect;
 	public int pointsOnDeath;
-	public ChamController cham;
+	public LastLevelChanger cham;
 
 	private AudioSource audio;
 
@@ -14,7 +14,7 @@ public class EnemyChamController : MonoBehaviour
 	void Start ()
 	{
 		this.audio = GetComponent<AudioSource> ();
-		cham = FindObjectOfType<ChamController> ();
+		cham = FindObjectOfType<LastLevelChanger> ();
 	}
 
 	// Update is called once per frame
