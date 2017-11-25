@@ -28,8 +28,10 @@ public class PlayerController : MonoBehaviour
 	private float climbVelocity;
 	private float gravityStore;
 
-	// Use this for initialization
-	void Start ()
+    public static bool canBuy ;
+
+    // Use this for initialization
+    void Start ()
 	{
 		this.myRigidbody2D = GetComponent<Rigidbody2D> ();
 		this.anim = GetComponent<Animator> ();
@@ -138,6 +140,10 @@ public class PlayerController : MonoBehaviour
             this.powerupSoundEffect.Play();
             Destroy(other.gameObject);
         }
+        if (other.name == "lifeStore") {
+            canBuy = true;
+            print("csm");
+         }
     }
 
 	void OnTriggerExit2D (Collider2D other)
@@ -146,6 +152,7 @@ public class PlayerController : MonoBehaviour
 			transform.parent = null;
 		}
 	}
+
 
 
 }
