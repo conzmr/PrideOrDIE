@@ -4,7 +4,7 @@ using System.Collections;
 public class LevelLoader : MonoBehaviour
 {
 	public string levelToLoad;
-	private int currentMaxLevel;
+	public int currentMaxLevel;
 	public int levelNum;
 	public int unlockLevel;
 	private bool playerInZone;
