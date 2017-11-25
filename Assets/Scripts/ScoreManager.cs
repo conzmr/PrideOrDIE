@@ -6,6 +6,7 @@ public class ScoreManager : MonoBehaviour
 {
 	public static int score;
 	public Text text;
+    
 
 	public static void AddPoints (int pointsToAdd)
 	{
@@ -28,8 +29,9 @@ public class ScoreManager : MonoBehaviour
 		ScoreManager.score = PlayerPrefs.GetInt ("CurrentPlayerScore");
 	}
 
-	void Update ()
+    void Update ()
 	{
+
 		if (ScoreManager.score < 0) {
 			ScoreManager.score = 0;
 			PlayerPrefs.SetInt ("CurrentPlayerScore", ScoreManager.score);

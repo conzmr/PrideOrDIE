@@ -38,7 +38,14 @@ public class LifeManager : MonoBehaviour
 		if (this.waitAfterGameOver < 0) {
 			Application.LoadLevel (this.mainMenu);
 		}
-	}
+ 
+        if (Input.GetKeyDown("b") && ScoreManager.score >= 1000 && PlayerController.canBuy == true)
+        {
+            print("Life Bought");
+            this.lifeCounter++;
+            ScoreManager.score -= 1000;
+        }
+    }
 
 	public void GiveLife ()
 	{
@@ -51,6 +58,8 @@ public class LifeManager : MonoBehaviour
 		this.lifeCounter--;
 		print ("take life");
 		PlayerPrefs.SetInt ("PlayerCurrentLives", this.lifeCounter);
-	}
+    }
+
+
 		
 }

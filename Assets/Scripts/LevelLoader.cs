@@ -19,6 +19,7 @@ public class LevelLoader : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+ 
 		if (Input.GetAxisRaw ("Vertical") > 0 && this.playerInZone && (this.levelNum <= this.currentMaxLevel)) {
 			if (this.unlockLevel>this.currentMaxLevel) {
 				this.currentMaxLevel = this.unlockLevel;
