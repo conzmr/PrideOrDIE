@@ -39,11 +39,11 @@ public class LifeManager : MonoBehaviour
 			Application.LoadLevel (this.mainMenu);
 		}
  
-        if (Input.GetKeyDown("b") && ScoreManager.score >= 1000 && PlayerController.canBuy == true)
+		if ((Input.GetButtonDown ("Fire3") || Input.GetKeyDown("b")) && ScoreManager.score >= 5000 && PlayerController.canBuy == true)
         {
             print("Life Bought");
             this.lifeCounter++;
-            ScoreManager.score -= 1000;
+            ScoreManager.score -= 5000;
         }
     }
 
